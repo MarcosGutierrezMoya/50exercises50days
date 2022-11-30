@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+}
+body{
+    background-color:mediumpurple;
+    height: 100vh;
+}
+#buttons{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2.5rem;
+}
+.btn{
+    background-color: rebeccapurple;
+    border-radius: 6%;
+    border: none;
+    height: 5rem;
+    width: 10rem;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}

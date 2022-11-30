@@ -1,0 +1,21 @@
+body{
+    height: 100vh;
+    padding: 50px;
+    gap: 24px;
+}
+body>div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+body>div>section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+#word{
+    width: 50vw;
+}

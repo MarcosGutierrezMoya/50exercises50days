@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+}
+body{
+    background-color:slateblue;
+}
+.search{
+    position: fixed;
+    top: 46.5%;
+    left: 43%;
+    display: flex;
+    justify-content: center;
+}
+.input{
+    height: 1.3rem;
+    padding: 15px;
+    margin-left: 3.5rem;
+    background-color: white;
+    border: none;
+    width: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.input:focus{
+    outline: none;
+}
+.occultInput{
+    font-size: 18px;
+    width: 10.5rem;    
+    margin-left: 0rem;
+    transition: 0.3s ease-in-out;
+    visibility: visible;
+}
+.btn{
+    font-size: 25px;
+    width: 3rem;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}

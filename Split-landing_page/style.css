@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100vh;
+}
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    filter:contrast(80%) ;
+}
+.left::before{
+    content: "";
+    background-blend-mode: multiply;
+    background-color: rgba(87, 84, 236, 0.7);
+}
+.left{
+    background-image: url(https://50projects50days.com/projects/split-landing-page/ps.jpg);
+    background-size: cover;
+    background-position: left;
+    background-blend-mode: multiply;
+    background-color:rgba(87, 84, 236, 0.7);
+}
+.right{
+    background-image: url(https://assets-prd.ignimgs.com/2021/10/15/xsx-minifridge-statics-16x9-po-noretail-jpg-1634306592805.jpg);
+    background-size:cover;
+    background-blend-mode: multiply;
+    background-position:left;
+    background-color:rgba(43, 43, 43, 0.8);
+}
+.split{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    transition: 0.7s ease-in-out;
+    white-space:nowrap;
+    overflow-x: hidden;
+    padding-bottom: 10%;
+}
+.split>h1{
+    color: white;
+    font-size: 4.5rem;
+    /* padding-bottom: 100px; */
+}
+.btn{
+    width: 15rem;
+    height: 4rem;
+    border: 3px solid white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+}
+.left>.btn:hover{
+    background-color:royalblue;
+    border: 3px solid royalblue;
+}
+.right>.btn:hover{
+    background-color:darkgreen;
+    border: 3px solid darkgreen;
+}
+.active{
+    width: 130%;
+    transition: 0.7s ease-in-out;
+}

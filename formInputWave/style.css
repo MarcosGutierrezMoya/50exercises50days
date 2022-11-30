@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color:#4682B4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container>h1{
+    color: white;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #2A4E6C;
+    padding: 3% 0%;
+    border-radius: 2%;
+    zoom: 110%;
+    width: 22rem;
+}
+.container>form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 80%;
+}
+.form-control{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5px;
+}
+.form-control>input{
+    background-color: transparent;
+    border-width: 0 0 2px 0;
+    border-radius: 5%;
+    border-color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: larger;
+    color: white;
+}
+.form-control>input.active{
+    outline:none;
+    border-color:turquoise;
+}
+.form-control>label{
+    color: white;
+    font-size: larger;
+    position: relative;
+    top: 10px;
+}
+.btn{
+    background-color:lightskyblue;
+    border: none;
+    border-radius:4%;
+    height: 3rem;
+    cursor: pointer;
+}
+.text{
+    color: white;
+}
+.text>a{
+    color: turquoise;
+    text-decoration: none;
+}
+
+.container>form>div>label{
+    display: flex;
+}
+.form-control>label>span{
+    /* visibility: hidden; */
+    transition: 0.3s ease-in-out;
+    position: relative;
+    top: 1.5rem;
+    color: white;
+}
+.form-control>label>span.active{
+    /* visibility: visible; */
+    transition: 0.3s ease-in-out;
+    position: relative;
+    top: 0.2rem;
+    color:turquoise;
+}
