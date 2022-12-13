@@ -1,37 +1,87 @@
 *{
     margin: 0;
+    font-family: 'Muli', sans-serif;
 }
 body{
     text-align: center;
-    background-color: #F0F0F0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    background-color: aliceblue;
     margin-top: 40px;
 }
 
 .faq-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .faq{
-    width: 40%;
-    background-color: aliceblue;
     text-align: left;
+    position: relative;
+    background-color: aliceblue;
     padding: 2rem;
     border: 1px solid grey;
     border-radius: 10px;
+    gap: 20px;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    margin: 30px 0;
+}
+
+.faq.active::after{
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #3498db;
+    position: absolute;
+    bottom: 20%;
+    right: 87%;
+    transform: rotateY(180deg);
+    font-size: 6.5rem;
+    opacity:0.2;
+}
+.faq.active::before{
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: green;
+    position:absolute;
+    z-index: 0;
+    top: 20%;
+    left: 4%;
+    font-size: 6.5rem;
+    opacity:0.2;
+}
+.active{
+    background-color: white;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 3px 6px rgb(0 0 0 / 10%);
 }
 
 .faq-toggle{
-    position:sticky;
-    left: 95%;
-    bottom: 90%;
+    position:absolute;
+    right: 20px;
+    bottom: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    padding: 10px;
+    text-align: center;
+}
+.fa-times{
+    position:absolute;
+    right: 1px;
+    bottom: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: grey;
+    color: white;
+}
+
+.faq-tittle{
+    font-weight: 100;
+    margin: 0 35px 0 0;
+}
+.faq-text{
+    display: none;
+    margin-top:30px;
+}
+.activeText{
+    display: block;
 }
