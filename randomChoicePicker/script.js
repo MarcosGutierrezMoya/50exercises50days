@@ -19,7 +19,7 @@ function splitText(event){
     else if(event.key === "Enter"){
         event.preventDefault();
         options = document.getElementsByClassName("option");
-        interval = setInterval(changeColor, 300);
+        interval = setInterval(changeColor, 100);
         event.target.value = null;
         setTimeout(() => {
             clearInterval(interval);
