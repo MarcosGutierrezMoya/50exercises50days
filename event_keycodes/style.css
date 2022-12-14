@@ -6,6 +6,24 @@
 body{
     height: 100vh;
 }
+a.menu{
+    position: absolute;
+    top: 0;
+    left: 44%;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 20px 0;
+    background-color: bisque;
+    color:seagreen;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #insert{
     height: 100%;
     width: 100%;

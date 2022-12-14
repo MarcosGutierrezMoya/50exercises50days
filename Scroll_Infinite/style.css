@@ -25,3 +25,18 @@ body{
     transform: translateX(0px);
     transition: 0.25s ease;
 }
+
+a.menu{
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 20px 0;
+    background-color: bisque;
+    color:seagreen;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

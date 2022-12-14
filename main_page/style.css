@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+}
+body{
+    display: grid;
+    grid-template-columns:auto auto auto auto auto;
+    justify-content: space-around;
+    background-color: azure;
+}
+
+a{
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 20px 0;
+    background-color: bisque;
+    color:darkslategray;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

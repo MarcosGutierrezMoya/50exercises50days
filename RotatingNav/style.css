@@ -8,17 +8,27 @@ body{
     background-color:#333333;
     overflow-x: hidden;
 }
+a.menu{
+    position: absolute;
+    top: 0%;
+    left: 44%;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 20px 0;
+    background-color: bisque;
+    color:seagreen;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
 /* #region main */
-/* .circle-container{
-    position: sticky;
-    right: 76%;
-    bottom: 92%;
-} */
 .rotaCircle{
-    /* position: fixed; */
-    /* right: 90%;
-    bottom: 80%; */
-    /* position: absolute; */
     transform: rotate(-90deg);
     transition: transform 1s ease;
 }
