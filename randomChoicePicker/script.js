@@ -1,20 +1,22 @@
 const textArea = document.getElementById("textarea");
 const tags = document.getElementById("tags");
 let text = "";
-let rdm = -1;
+let random = -1;
 let interval;
 let options;
-let rdmSelect = false;
+let randomSelect = false;
 
 textArea.addEventListener("keydown",splitText)
 
 function splitText(event){
-    if (rdmSelect) {
-        rdmSelect = false;
+    console.log(event.key);
+    if (randomSelect) {
+        randomSelect = false;
         tags.innerHTML = "";
     }
-    if(event.target.value[event.target.value.length-1] === ","){
-        tags.innerHTML += `<p class="option">${text}</p>`;
+    
+    if(event.key === ","){
+        tags.innerHTML += `<p class="option"></p>`;
     }
     else if(event.key === "Enter"){
         event.preventDefault();
@@ -23,18 +25,33 @@ function splitText(event){
         event.target.value = null;
         setTimeout(() => {
             clearInterval(interval);
-            rdmSelect = true;
+            randomSelect = true;
         }, 3000);
     }
+    else if(event.key === "Backspace"){
+        if(event.target.value[event.target.value.length-1] === "," || event.target.value.length === 1){
+            tags.lastElementChild.remove();
+        }
+        else{
+        setTimeout(() => {
+            tags.lastElementChild.textContent = event.target.value.slice(event.target.value.lastIndexOf(",") + 1);            
+        }, 0.01);
+        }
+    }
     else{
-        text = event.target.value.slice(event.target.value.lastIndexOf(",") + 1);
+        if (tags.childElementCount === 0) {
+            tags.innerHTML = `<p class="option"></p>`;
+        }
+        setTimeout(() => {
+            tags.lastElementChild.textContent = event.target.value.slice(event.target.value.lastIndexOf(",") + 1);            
+        }, 0.01);
     }
 }
 
 function changeColor() {
-    if (rdm !== -1) {
-        options[rdm].classList.remove("active")
+    if (random !== -1) {
+        options[random].classList.remove("active")
     }
-    rdm = Math.floor(Math.random()*(options.length));
-    options[rdm].classList.add("active");
+    random = Math.floor(Math.random()*(options.length));
+    options[random].classList.add("active");
 }
